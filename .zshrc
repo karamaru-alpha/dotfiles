@@ -18,11 +18,16 @@ alias save="git add . && git commit --signoff -m"
 alias amend="git commit --amend"
 ## branch
 alias co="git switch"
-alias cob="git checkout -b"
+alias cob="git switch -c"
 alias rename="git branch -m"
 alias del="git branch -D"
 alias cur="git rev-parse --abbrev-ref HEAD | pbcopy"
-alias pc='git branch | peco | xargs git switch'
+fbr() {
+  local branches branch
+  branches=$(git --no-pager branch -vv) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git switch $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
 ## merge
 alias mg="git merge"
 alias pullf='(){git fetch origin $1 && git reset --hard origin/$1}'
