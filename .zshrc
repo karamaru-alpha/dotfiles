@@ -6,6 +6,12 @@ source $ZSH/oh-my-zsh.sh
 # vim
 alias v="nvim"
 
+# linux command
+fcd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$dir"
+}
+
 # go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
