@@ -3,6 +3,9 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="wedisagree"
 source $ZSH/oh-my-zsh.sh
 
+# vim
+alias v="nvim"
+
 # go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin

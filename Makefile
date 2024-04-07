@@ -1,3 +1,3 @@
 .PHONY: install
 install:
-	ln -sfnv .zshrc ~/
+	sh ./install.sh
