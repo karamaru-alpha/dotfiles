@@ -94,9 +94,10 @@ return {
 		local buttons = {
 			type = "group",
 			val = {
-				button("f", "󰱼  Search", ":Telescope find_files<CR>"),
-				button("e", "  New", ":ene<CR>"),
-				button("q", "  Quit", ":qa<CR>"),
+				button("f", "Search", ":Telescope find_files<CR>"),
+				button("g", "Grep", ":Telescope egrepify<CR>"),
+				button("e", "New", ":ene<CR>"),
+				button("q", "Quit", ":qa<CR>"),
 			},
 			opts = {
 				position = "center",
