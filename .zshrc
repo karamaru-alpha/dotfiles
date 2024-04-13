@@ -37,7 +37,7 @@ export PATH=$PATH:$GOPATH/bin
 
 # git
 ## commit
-alias cz="git add .; git cz"
+alias cz="git add . && git cz"
 alias cm="git commit -m"
 alias save="git add . && git commit -m"
 alias amend="git commit --amend"
