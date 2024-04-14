@@ -18,9 +18,6 @@ zinit wait lucid blockf light-mode for \
     @'zsh-users/zsh-completions' \
     @'paulirish/git-open'
 
-PROMPT='%F{white}%* '$PROMPT
-eval "$(starship init zsh)"
-
 # vim
 alias v="nvim"
 
