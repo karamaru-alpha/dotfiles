@@ -12,7 +12,6 @@ apply = ["defer"]
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
-use = ['{{ name }}.zsh']
 apply = ["defer"]
 
 [plugins.zsh-completions]
