@@ -11,7 +11,6 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz compinit
 compinit
 
-### zinit plugins
 zinit wait lucid blockf light-mode for \
     @'zsh-users/zsh-syntax-highlighting' \
     @'zsh-users/zsh-autosuggestions' \
@@ -33,12 +32,10 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # git
-## commit
 alias cz="git add . && git cz"
 alias cm="git commit -m"
 alias save="git add . && git commit -m"
 alias amend="git commit --amend"
-## branch
 alias co="git switch"
 alias cob="git switch -c"
 alias rename="git branch -m"
@@ -50,7 +47,6 @@ fco() {
   branch=$(echo "$branches" | fzf +m) &&
   git switch $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
-## other
 alias mg="git merge"
 alias pullf='(){git fetch origin $1 && git reset --hard origin/$1}'
 alias refresh='git restore --staged . && git checkout . && git clean -df'
@@ -72,5 +68,5 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 # docker
 source ~/.docker/init-zsh.sh || true
 
-# asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# mise
+eval "$(~/.local/bin/mise activate zsh)"
