@@ -26,6 +26,10 @@ fcd() {
   dir=$(find ${1:-.} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) && cd "$dir"
 }
 alias ls="ls -G"
+alias grep="grep --color=always"
+alias ..="cd .. && pwd"
+alias ...="cd ../.. && pwd"
+alias ....="cd ../../.. && pwd"
 
 # go
 export GOPATH=$HOME/go
