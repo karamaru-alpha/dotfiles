@@ -50,10 +50,11 @@ fco() {
   branch=$(echo "$branches" | fzf +m) &&
   git switch $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
-## merge
+## other
 alias mg="git merge"
 alias pullf='(){git fetch origin $1 && git reset --hard origin/$1}'
 alias refresh='git restore --staged . && git checkout . && git clean -df'
+alias root="cd $(git rev-parse --show-toplevel)"
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh

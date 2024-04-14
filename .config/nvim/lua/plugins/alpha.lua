@@ -96,6 +96,7 @@ return {
 			val = {
 				button("f", "Search", ":Telescope find_files<CR>"),
 				button("g", "Grep", ":Telescope egrepify<CR>"),
+				button("s", "GitStatus", ":Telescope git_status<CR>"),
 				button("e", "New", ":ene<CR>"),
 				button("q", "Quit", ":qa<CR>"),
 			},
