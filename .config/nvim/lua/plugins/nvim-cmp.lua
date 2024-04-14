@@ -3,12 +3,12 @@ return {
   event = { "InsertEnter", "CmdlineEnter" },
   dependencies = {
     { 'hrsh7th/cmp-nvim-lsp' },
-    { 
-      'L3MON4D3/LuaSnip', 
-      make =  "make install_jsregexp", 
+    {
+      'L3MON4D3/LuaSnip',
+      make = "make install_jsregexp",
       dependencies = { "rafamadriz/friendly-snippets" },
-      config = function() 
-        require('luasnip.loaders.from_vscode').lazy_load() 
+      config = function()
+        require('luasnip.loaders.from_vscode').lazy_load()
       end
     },
     { 'saadparwaiz1/cmp_luasnip', },
@@ -43,9 +43,9 @@ return {
       completion = {
         completeopt = 'menu,menuone,preview,noselect'
       },
-      formatting = {
-        fields = { 'abbr', 'kind', 'menu' },
-      },
+      -- formatting = {
+      --  fields = { 'abbr', 'kind', 'menu' }
+      -- },
     })
   end
 }
