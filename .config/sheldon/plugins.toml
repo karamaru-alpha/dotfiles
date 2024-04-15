@@ -25,3 +25,8 @@ github = "paulirish/git-open"
 
 [plugins.local]
 local = "~/.config/zsh"
+use = ["{!override,*}.zsh"]
+
+[plugins.local-override]
+local = "~/.config/zsh"
+use = ["override.zsh"]
