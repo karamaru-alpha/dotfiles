@@ -5,9 +5,9 @@ return {
   },
   event = { "BufReadPre", "BufNewFile" },
   keys = {
-    { "<leader>m", "<cmd>Telescope marks<cr>",      desc = "search by [M]arks" },
     { "<leader>f", "<cmd>Telescope find_files<cr>", desc = "search [F]iles" },
-    -- { "<leader>g", "<cmd>Telescope live_grep<cr>",  desc = "search by [G]rep" },
+    { "<leader>.", "<cmd>Telescope find_files hidden=true no_ignore=true<cr>", desc = "search Files with [.]files" },
+    { "<leader>s", "<cmd>Telescope git_status<cr>",  desc = "search by Git [S]tatus" },
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
