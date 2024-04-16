@@ -21,4 +21,4 @@ fi
 source "$sheldon_cache"
 unset cache_dir sheldon_cache sheldon_toml
 
-zsh-defer zsh-defer unfunction source
+zsh-defer unfunction source
