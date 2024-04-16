@@ -1,3 +1,5 @@
+*.png
+*.zwc
 .config/gcloud/
 .config/github-copilot/
 .config/zsh/override.zsh
